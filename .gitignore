@@ -13,9 +13,15 @@
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
+<<<<<<< HEAD
 npm-debug.log
 yarn-error.log
 /auth.json
+=======
+auth.json
+npm-debug.log
+yarn-error.log
+>>>>>>> aa4cda2878052313cbdbb176781f049063ea6535
 /.fleet
 /.idea
 /.nova
