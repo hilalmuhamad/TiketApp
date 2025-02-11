@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Filament\Resources\PilihTribunResource\Pages;
+
+use App\Filament\Resources\PilihTribunResource;
+use Filament\Actions;
+use Filament\Resources\Pages\EditRecord;
+
+class EditPilihTribun extends EditRecord
+{
+    protected static string $resource = PilihTribunResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\DeleteAction::make(),
+        ];
+    }
+}
