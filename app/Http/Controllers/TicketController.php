@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Payment;
 use App\Models\Ticket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use PDF;
 
 class TicketController extends Controller
 {
@@ -96,5 +100,25 @@ class TicketController extends Controller
         return redirect()->route('tickets.index')->with('success', 'Ticket successfully deleted.');
     }
 
+    public function downloadTicket($paymentId)
+    {
+        $payment = Payment::with(['user', 'tribun'])->findOrFail($paymentId);
+        
+        $ticketNumber = 'TICKET-' . str_pad($payment->id, 6, '0', STR_PAD_LEFT);
+        
+        $data = [
+            'home_team' => 'PERSIB',
+            'away_team' => 'PERSIJA',
+            'location' => 'Stadion Gelora Bandung Lautan Api',
+            'date' => '20 November 2024',
+            'time' => '19:00 WIB',
+            'tribune' => $payment->tribun->nama_tribun,
+            'price' => $payment->tribun->harga,
+            'seat_number' => 'A-' . $payment->id,
+            'ticket_number' => $ticketNumber // Make sure this is passed to the view
+        ];
 
+        $pdf = PDF::loadView('pdf.match_result', $data);
+        return $pdf->download($ticketNumber . '.pdf');
+    }
 }

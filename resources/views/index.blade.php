@@ -168,18 +168,20 @@
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3"><b>Pertandingan mendatang</b></h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                         <a class="cat-item d-block bg-light text-center rounded p-3" href="">
                             <div class="rounded p-4">
                                 <div class="icon mb-3">
-                                    <img class="img-fluid" src="Asset/img/persib2.jpg" alt="Icon">
+                                    <img class="img-fluid" src="Asset/img/persibpersija.jpg" alt="Icon">
                                 </div>
-                                <h6>Persib vs Arema</h6>
-                                <span>Stadion Gelora Bandung Lautan Api</span><br>
-                                <span>20 November 2023, 19:00 WIB</span>
+                                <h6 class="font-weight-bold">Persib vs Persija</h6>
+                                <span class="d-block">Stadion Gelora Bandung Lautan Api</span>
+                                <span class="d-block">16 Februari 2025, 19:00 WIB</span>
+                            </div>
+                            <div class="mt-3">
+                                <a href="{{ url('/ticket') }}" class="btn btn-dark">Beli Tiket</a>
                             </div>
                         </a>
                     </div>
@@ -187,10 +189,11 @@
                         <a class="cat-item d-block bg-light text-center rounded p-3" href="">
                             <div class="rounded p-4">
                                 <div class="icon mb-3">
-                                    <img class="img-fluid" src="Asset/img/persib2.jpg" alt="Icon">
+                                    <img class="img-fluid" src="Asset/img/persibmalut.jpg" alt="Icon">
                                 </div>
-                                <h6>Villa</h6>
-                                <span>123 Properties</span>
+                                <h6 class="font-weight-bold">Persib vs Malut</h6>
+                                <span class="d-block">Stadion Gelora Bandung Lautan Api</span>
+                                <span class="d-block">16 Februari 2025, 19:00 WIB</span>
                             </div>
                         </a>
                     </div>
@@ -264,6 +267,148 @@
             </div>
         </div>
         <!-- Category End -->
+
+        <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pertandingan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #222;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #222;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #1e3a8a;
+        }
+
+        .match-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .team {
+            width: 150px;
+        }
+
+        .team img {
+            width: 80px;
+            height: auto;
+        }
+
+        .team-name {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .status {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .score {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0 20px;
+        }
+
+        .vs {
+            background-color: #d1e9ff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        .match-info {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            border: 2px solid #1e3a8a;
+            color: #1e3a8a;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            background-color: #1e3a8a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hasil Pertandingan</h1>
+    <nav>
+        <a href="#">First Team</a>
+        <a href="#">Legend</a>
+        <a href="#">Putri</a>
+        <a href="#">U16</a>
+        <a href="#">U18</a>
+        <a href="#">U20</a>
+    </nav>
+
+    <div class="match-container">
+        <div class="team">
+            <div class="team-name">PSIS SEMARANG</div>
+            <div class="status" style="color: #9ca3af;">LOSS</div>
+            <img src="asset/img/psis.png" alt="PSIS Logo">
+        </div>
+
+        <div class="score">0</div>
+        <div class="vs">VS</div>
+        <div class="score">1</div>
+
+        <div class="team">
+            <img src="asset/img/logo_persib.png" alt="Persib Logo">
+            <div class="team-name">PERSIB BANDUNG</div>
+            <div class="status" style="color: #f97316;">WIN</div>
+        </div>
+    </div>
+
+    <div class="match-info">
+        <div>📍 JATIDIRI</div>
+        <div>📅 09 Februari 2025 - 19:00 WIB</div>
+    </div>
+
+    <a href="#" class="button">LIHAT SEMUA HASIL →</a>
+</body>
+</html>
+  
 
     <div class="container my-5">
         <div class="row">

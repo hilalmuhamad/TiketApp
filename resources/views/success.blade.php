@@ -113,8 +113,7 @@
                                         
                                         <!-- Add Download Button -->
                                         <div class="mt-4">
-                                            <a href="{{ route('ticket.download', $payment->id) }}" class="btn btn-success">
-                                                <i class="fas fa-download"></i> Download E-Ticket PDF
+                                        <a href="{{ route('download.pdf') }}" class="button">Download E-Ticket PDF</a>
                                             </a>
                                         </div>
                                     </div>
@@ -131,9 +130,6 @@
             
             <!-- Match Information -->
             <div class="match-info">
-            <div class="text-center">
-                <img src="/Asset/img/tiketpersib.png" alt="Ticket Image" class="img-fluid mb-8" style="width: 100%; max-width: 600px;">
-            </div>
                 <h3 class="h5 mb-10">Match Details</h3>
                 <p class="mb-1"><strong>Event:</strong> Persib VS Persija</p>
                 <p class="mb-1"><strong>Date:</strong> 20 November 2024, 19:00 WIB</p>

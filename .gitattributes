@@ -1,11 +1,29 @@
 * text=auto eol=lf
 
+# Laravel files
 *.blade.php diff=html
 *.css diff=css
 *.html diff=html
 *.md diff=markdown
 *.php diff=php
+*.js diff=javascript
+*.json diff=json
+*.yml diff=yaml
+*.yaml diff=yaml
 
+# Binary files
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+# Ignore files when exporting
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
+phpunit.xml export-ignore

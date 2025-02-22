@@ -25,7 +25,7 @@
     <style>
       /* Menambahkan background pada body */
       body {
-        background-image: url('Asset/img/lapbola2.png');
+        background-image: url('Asset/img/gbla.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -33,7 +33,7 @@
 
       /* Jika hanya ingin di bagian hero */
       #hero {
-        background-image: url('Assets/img/lapbola2.png');
+        background-image: url('Assets/img/gbla.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -64,8 +64,8 @@
                     <button type="submit" class="btn btn-danger">Logout</button>
                 </form>
               @else
-              <a href="{{ route('register') }}" class="btn btn-primary">Register</a>
-                <a href="{{ route('login') }}" class="btn btn-primary">Masuk</a>
+              <a href="{{ route('register') }}" class="btn btn-dark">Register</a>
+                <a href="{{ route('login') }}" class="btn btn-dark">Masuk</a>
               @endauth
             </div>
           </div>
@@ -79,9 +79,10 @@
                 <div class="col-md-6 hero-tagline my-auto">
                     <h1>Selamat Datang Di Golara!</h1>
                     <p><span class="fw-bold">Wujudkan impian Anda</span> untuk hadir di acara yang sudah lama Anda tunggu! Segera pesan tiketnya!</p>
-
-                    <!-- Changed button to not require auth -->
                     <a href="{{ route('index') }}" class="button-lg-primary btn btn-primary">Beli Tiket</a>
+                  </div>
+                  <div class="col-md-6 my-auto">
+                    <img src="{{ asset('Asset/img/stadium.png') }}" alt="Your Image" class="img-fluid">
                 </div>
             </div>
         </div>

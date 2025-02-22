@@ -20,6 +20,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PDFController;
 
 // Public routes (no auth required)
 Route::get('/', [WelcomeController::class, 'index'])->name('home');
@@ -70,5 +71,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 Route::resource('purchases', PurchaseController::class);
+Route::get('/download-pdf', [PDFController::class, 'download'])->name('download.pdf');
 
 require __DIR__.'/auth.php';
